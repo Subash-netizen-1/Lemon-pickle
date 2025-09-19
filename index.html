@@ -1,16 +1,68 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Prank Site</title>
-  </head>
-  <body>
-    <h1 id="message">Click the button 👇</h1>
-    <button onclick="reveal()">Click Me</button>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lemon Pickle</title>
+  <style>
+    body {
+      background: black;
+      color: white;
+      font-family: "Comic Sans MS", cursive, sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
 
-    <script>
-      function reveal() {
-        document.getElementById("message").textContent = "You are gay 🫵";
-      }
-    </script>
-  </body>
+    h1 {
+      font-size: 4rem;
+      margin-bottom: 30px;
+    }
+
+    button {
+      background: yellow;
+      color: black;
+      border: none;
+      padding: 20px 40px;
+      font-size: 2rem;
+      font-weight: bold;
+      border-radius: 15px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      transform: scale(1.2);
+      background: red;
+      color: white;
+    }
+
+    @keyframes rainbowFlash {
+      0%   { color: red; }
+      20%  { color: orange; }
+      40%  { color: yellow; }
+      60%  { color: green; }
+      80%  { color: blue; }
+      100% { color: violet; }
+    }
+
+    .rainbow {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-top: 30px;
+      animation: rainbowFlash 0.3s infinite;
+    }
+  </style>
+</head>
+<body>
+  <h1>Click the button 👇</h1>
+  <button onclick="playPrank()">Click Me!</button>
+  <p id="message"></p>
+
+  <script>
+    function playPrank() {
+      document.getElementById("message").innerText = "🫵 YOU ARE GAY! 😂🌈";
+      document.getElementById("message").classList.add("rainbow");
+    }
+  </script>
+</body>
 </html>
